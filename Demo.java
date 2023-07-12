@@ -1,8 +1,18 @@
+package com.corejava;
 
-class Demo
-{
-    public static void main(String Arg[])
-    {
-        System.out.println("Jay Ganesh...");
-    }
+public class Demo {
+	
+	String s = "Welcome to java";
+	
+	void display()
+	{
+		System.out.println(s);
+		System.out.println(s.length());
+	}
+	public static void main(String args[])
+	{
+		Demo obj = new Demo();
+		obj.display();
+	}
+
 }
