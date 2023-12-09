@@ -1,34 +1,35 @@
-interface Circle
-{
-    public final float PI = 3.14f;
+package com.main;
 
-    public float CalculateArea(float Radius);
-    public float CalculateCircumfarance(float Radius);
+
+interface A
+{
+	public void add();
 }
 
-class Demo implements Circle
+interface B
 {
-    public float CalculateArea(float Radius)
-    {
-        return PI * Radius * Radius;
-    }
-    public float CalculateCircumfarance(float Radius)
-    {
-        return 2 * PI * Radius;
-    }
+	public void mul
+	();
 }
 
-class InterfaceDemo
+class AB implements A,B
 {
-    public static void main(String Arg[])
-    {
-        Demo obj = new Demo();
-        float fRet = 0.0f;
+	public void add()
+	{
+		System.out.println("add");
+	}
+	public void mul()
+	{
+		System.out.println("Multiplication");
+	}
+}
 
-        fRet = obj.CalculateArea(10.5f);
-        System.out.println("Area is : "+fRet);
+public class InterfaceDemo {
+	public static void main(String[] args) 
+	{
+		AB obj = new AB();
+		obj.add();
+		obj.mul();
+	}
 
-        fRet = obj.CalculateCircumfarance(10.5f);
-        System.out.println("Circumfarance is : "+fRet);
-    }
 }
